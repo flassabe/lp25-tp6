@@ -15,7 +15,7 @@ int result = getopt(argc, argv, "oa:");
 La fonction `getopt` retourne la valeur du caractère de l'option quand celle ci est rencontrée, et -1 si aucune option n'est rencontrée. Pour exploiter les options ci dessus, il est nécessaire de boucler sur l'appel à `getopt` tant que sa valeur de retour n'est pas nulle.
 
 ```c
-#include <unistd.h>
+#include <getopt.h>
 
 int main(int argc, char *argv[]) {
 	int opt = 0;
@@ -65,7 +65,7 @@ Il est également possible de fournir au programme des options longues préfixé
 Pour expliciter son fonctionnement, nous allons remplacer les options courtes des exercices précédents par des options longues que nous nommerons `org` pour le `-o`, `app` pour le `-a` et `binary` pour le `-b` (ne cherchez pas un sens aux options, il n'y en a en l'occurrence absolument aucun). Le programme deviendrait ceci :
 
 ```c
-#include <unistd.h>
+#include <getopt.h>
 
 int main(int argc, char *argv[]) {
 	int opt = 0;
